@@ -5,7 +5,7 @@ import image1 from "../Components/microsoft-logo.png";
 
 const Navbar = () => {
   const [isProductsDropdownOpen, setIsProductsDropdownOpen] = useState(false);
-  const [isMicrosoftDropdownOpen, setIsMicrosoftDropdownOpen] = useState(false);
+ 
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -28,7 +28,7 @@ const Navbar = () => {
         <li className="relative">
           <button
             onClick={() => setIsProductsDropdownOpen(!isProductsDropdownOpen)}
-            className="flex items-center hover:text-blue-500 transition"
+            className="flex items-center hover:text-blue-500 transition hover:underline"
           >
             Products <FaChevronDown className="ml-1" />
           </button>
@@ -37,39 +37,39 @@ const Navbar = () => {
               {/* Column 1 */}
               <div className="space-y-3">
                 <h1 className="font-bold px-4 py-2">For Home</h1>
-                <Link to="/office" className="block px-4 py-1 hover:bg-gray-200">Pricing for Home</Link>
-                <Link to="/windows" className="block px-4 py-1 hover:bg-gray-200">For Families</Link>
-                <Link to="/xbox" className="block px-4 py-1 hover:bg-gray-200">For Individuals</Link>
-                <Link to="/students" className="block px-4 py-1 hover:bg-gray-200">For Students</Link>
-                <Link to="/see-all-home" className="block px-4 py-1 hover:bg-gray-200">See all Home</Link>
+                <Link to="/office" className="block px-4 py-1 hover:underline hover:bg-gray-200">Pricing for Home</Link>
+                <Link to="/windows" className="block px-4 py-1 hover:underline hover:bg-gray-200">For Families</Link>
+                <Link to="/xbox" className="block px-4 py-1 hover:underline hover:bg-gray-200">For Individuals</Link>
+                <Link to="/students" className="block px-4 py-1 hover:underline hover:bg-gray-200">For Students</Link>
+                <Link to="/see-all-home" className="block px-4 py-1 hover:underline hover:bg-gray-200">See all Home</Link>
               </div>
               
               {/* Column 2 */}
               <div className="space-y-3">
                 <h1 className="font-bold px-4 py-2">For Business</h1>
-                <Link to="/business-pricing" className="block px-4 py-1 hover:bg-gray-200">Pricing for Business</Link>
-                <Link to="/small-business" className="block px-4 py-1 hover:bg-gray-200">For Small Business</Link>
+                <Link to="/business-pricing" className="block px-4 py-1 hover:bg-gray-200 hover:underline">Pricing for Business</Link>
+                <Link to="/small-business" className="block px-4 py-1 hover:bg-gray-200 hover:underline">For Small Business</Link>
                 <h1 className="font-bold px-4 py-2 mt-6">For Enterprise</h1>
-                <Link to="/enterprise-pricing" className="block px-4 py-1 hover:bg-gray-200">Pricing for Enterprise</Link>
-                <Link to="/enterprise" className="block px-4 py-1 hover:bg-gray-200">For Enterprise</Link>
+                <Link to="/enterprise-pricing" className="block px-4 py-1 hover:bg-gray-200 hover:underline">Pricing for Enterprise</Link>
+                <Link to="/enterprise" className="block px-4 py-1 hover:bg-gray-200 hover:underline">For Enterprise</Link>
               </div>
 
               {/* Column 3 */}
               <div className="space-y-3">
                 <h1 className="font-bold px-4 py-2">Apps & Services</h1>
-                <Link to="/copilot" className="block px-4 py-1 hover:bg-gray-200">Microsoft 365 Copilot</Link>
-                <Link to="/excel" className="block px-4 py-1 hover:bg-gray-200">Excel</Link>
-                <Link to="/teams" className="block px-4 py-1 hover:bg-gray-200">Microsoft Teams</Link>
-                <Link to="/word" className="block px-4 py-1 hover:bg-gray-200">Word</Link>
-                <Link to="/onedrive" className="block px-4 py-1 hover:bg-gray-200">OneDrive</Link>
+                <Link to="/copilot" className="block px-4 py-1 hover:bg-gray-200 hover:underline ">Microsoft 365 Copilot</Link>
+                <Link to="/excel" className="block px-4 py-1 hover:bg-gray-200 hover:underline">Excel</Link>
+                <Link to="/teams" className="block px-4 py-1 hover:bg-gray-200  hover:underline">Microsoft Teams</Link>
+                <Link to="/word" className="block px-4 py-1 hover:bg-gray-200   hover:underline">Word</Link>
+                <Link to="/onedrive" className="block px-4 py-1 hover:bg-gray-200 hover:underline">OneDrive</Link>
               </div>
             </div>
           )}
         </li>
 
-        <li><Link to="/plans-and-pricing">Plans and pricing</Link></li>
-        <li><Link to="/resources">Resources</Link></li>
-        <li><Link to="/support">Support</Link></li>
+        <li><Link to="/plans-and-pricing" className="hover:underline">Plans and pricing</Link></li>
+        <li><Link to="/resources" className="hover:underline">Resources</Link></li>
+        <li><Link to="/support" className="hover:underline">Support</Link></li>
       </ul>
 
       {/* Mobile Menu Toggle Button */}
@@ -81,12 +81,12 @@ const Navbar = () => {
       <ul className="hidden md:flex items-center font-Poppins text-sm gap-6 ml-auto">
         <li>
           <button onClick={() => setIsSearchOpen(!isSearchOpen)} className="flex items-center hover:text-black">
-            <FaSearch className="mr-2" /> Search
+            <FaSearch className="mr-2 hover:underline" /> Search
           </button>
         </li>
         <li>
           <Link to="/sign-in" className="flex items-center hover:text-black">
-            <FaUser className="mr-2" /> Sign in
+            <FaUser className="mr-2 hover:underline" /> Sign in
           </Link>
         </li>
       </ul>
