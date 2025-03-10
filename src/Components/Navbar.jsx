@@ -5,6 +5,7 @@ import image1 from "../Components/microsoft-logo.png";
 
 const Navbar = () => {
   const [isProductsDropdownOpen, setIsProductsDropdownOpen] = useState(false);
+ 
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -16,8 +17,8 @@ const Navbar = () => {
       {/* Vertical Divider */}
       <div className="h-6 border-l-[1px] border-black ml-4 hidden md:block"></div>
 
-      {/* Microsoft 365 Title (Now Visible on Mobile) */}
-      <Link to="/microsoft365" className="font-bold ml-4 md:ml-10 text-black block">
+      {/* Microsoft 365 Title */}
+      <Link to="/microsoft356" className="font-bold ml-4 md:ml-10 text-black hidden md:block">
         Microsoft 365
       </Link>
 
@@ -42,7 +43,7 @@ const Navbar = () => {
                 <Link to="/students" className="block px-4 py-1 hover:underline hover:bg-gray-200">For Students</Link>
                 <Link to="/see-all-home" className="block px-4 py-1 hover:underline hover:bg-gray-200">See all Home</Link>
               </div>
-
+              
               {/* Column 2 */}
               <div className="space-y-3">
                 <h1 className="font-bold px-4 py-2">For Business</h1>
@@ -58,8 +59,8 @@ const Navbar = () => {
                 <h1 className="font-bold px-4 py-2">Apps & Services</h1>
                 <Link to="/copilot" className="block px-4 py-1 hover:bg-gray-200 hover:underline ">Microsoft 365 Copilot</Link>
                 <Link to="/excel" className="block px-4 py-1 hover:bg-gray-200 hover:underline">Excel</Link>
-                <Link to="/teams" className="block px-4 py-1 hover:bg-gray-200 hover:underline">Microsoft Teams</Link>
-                <Link to="/word" className="block px-4 py-1 hover:bg-gray-200 hover:underline">Word</Link>
+                <Link to="/teams" className="block px-4 py-1 hover:bg-gray-200  hover:underline">Microsoft Teams</Link>
+                <Link to="/word" className="block px-4 py-1 hover:bg-gray-200   hover:underline">Word</Link>
                 <Link to="/onedrive" className="block px-4 py-1 hover:bg-gray-200 hover:underline">OneDrive</Link>
               </div>
             </div>
@@ -94,11 +95,7 @@ const Navbar = () => {
       {isMobileMenuOpen && (
         <div className="absolute top-16 left-0 w-full bg-white shadow-md py-6 px-6 z-50">
           <ul className="flex flex-col gap-5">
-            <li>
-              <Link to="/microsoft365" className="block py-2 text-black font-bold hover:underline">
-                Microsoft 365
-              </Link>
-            </li>
+            <li><Link to="/microsoft365" className=" py-2 hover:underline">Microsoft 365</Link></li>
             <li>
               <button
                 onClick={() => setIsProductsDropdownOpen(!isProductsDropdownOpen)}
@@ -128,4 +125,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Navbar; 
