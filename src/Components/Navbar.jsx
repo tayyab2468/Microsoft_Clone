@@ -18,7 +18,7 @@ const Navbar = () => {
       <div className="h-6 border-l-[1px] border-black ml-4 hidden md:block"></div>
 
       {/* Microsoft 365 Title */}
-     <Link to="/microsoft365" className="font-bold ml-4 md:ml-10 text-black block">
+     <Link to="/microsoft356" className="font-bold ml-4 md:ml-10 text-black block">
   Microsoft 365
 </Link>
 
