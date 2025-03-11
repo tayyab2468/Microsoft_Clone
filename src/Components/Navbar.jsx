@@ -95,7 +95,7 @@ const Navbar = () => {
       {isMobileMenuOpen && (
         <div className="absolute top-16 left-0 w-full bg-white shadow-md py-6 px-6 z-50">
           <ul className="flex flex-col gap-5">
-            <li><Link to="/microsoft365" className=" py-2 hover:underline">Microsoft 365</Link></li>
+            <li><Link to="/microsoft356" className=" py-2 hover:underline">Microsoft 365</Link></li>
             <li>
               <button
                 onClick={() => setIsProductsDropdownOpen(!isProductsDropdownOpen)}
